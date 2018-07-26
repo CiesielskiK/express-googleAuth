@@ -1,0 +1,14 @@
+nav
+  div.brandContainer
+    a(href="/")
+      i.fas.fa-adjust
+      | main-auth!
+  div.signInContainer
+    if (user)
+      p.signed
+        | Signed as
+        br
+        span #{user.email}
+      a(href='/logout')#logout Logout
+    else
+      a(href='../auth/google')#signIn Sign in
